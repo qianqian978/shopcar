@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <title>图书详情</title>
+  <link rel="stylesheet" href="./dist/swiper.min.css">
+  <link rel="stylesheet" href="./dist/index.min.css">
+  <script src="./dist/zepto.min.js"></script>
+  <script src="./dist/swiper.min.js"></script>
+</head>
+<body>
+        
+  
+        <!--头部滚动-->
+        <section class="main-slide">
+            <div class="swiper-container book-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-cover">
+                            <span class="bookimg-wrap"><img src="src/images/cover/cover01.png" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-cover">
+                            <span class="bookimg-wrap"><img src="src/images/cover/cover02.png" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-cover">
+                            <span class="bookimg-wrap"><img src="src/images/cover/cover03.png" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-cover">
+                            <span class="bookimg-wrap"><img src="src/images/cover/cover04.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+        </section>
+
+<div id="book">
+        <!-- <section class="book-info">
+            <div class="book-name">时运变迁</div>
+            <div class="book-author">[美]保罗·沃尔克</div>
+            <div class="book-type">
+                <a href="javascript:;" data-id="dz" class="book-typeitem type-active" data-price="20.00">
+                    电子书
+                </a>
+                <a href="javascript:;" class="book-typeitem" data-id="jz" data-price="50.00">
+                    精装书
+                </a>
+            </div>
+            <div class="book-price">
+                ￥--
+            </div>
+        </section> -->
+        <!--图书简介-->
+        <section class="book-section">
+            <div class="main-title">图书简介</div>
+            <div class="main-text" data-long="美国战后经济地位的奠基人之一“最伟大的联储主席”沃尔克，和日本前大藏省国际金融局长行天丰雄，携手回顾世界货币体系的演变历程。曾经的艰难抉择，误判和教训，各自对未来做出的判断和展望；这些无疑是当下中国读者最佳的向导，而且无可替代美国战后经济地位的奠基人之一“最伟大的联储主席”沃尔克，和日本前大藏省国际金融局长行天丰雄，携手回顾世界货币体系的演变历程。曾经的艰难抉择，误判和教训，各自对未来做出的判断和展望；这些无疑是当下中国读者最佳的向导，而且无可替代" data-short="美国战后经济地位的奠基人之一“最伟大的联储主席”沃尔克，和日本前大藏省国际金融局长行天丰雄，携手回顾世界货币体系的演变历程。曾经的艰难抉择，误判和教训，各自对未来做出的判断和展望；这些无疑是当下中国读者最佳的向导，而且无可替代...">
+                <span class="innerText">美国战后经济地位的奠基人之一“最伟大的联储主席”沃尔克，和日本前大藏省国际金融局长行天丰雄，携手回顾世界货币体系的演变历程。曾经的艰难抉择，误判和教训，各自对未来做出的判断和展望；这些无疑是当下中国读者最佳的向导，而且无可替代...</span><a href="javascript:;" class="text-more">展开</a>
+            </div>
+        </section>
+        <!--媒体推荐-->
+        <section class="book-section">
+            <div class="main-title">媒体推荐</div>
+            <div class="main-text" data-long="与旧版相比，新版增加了沃尔克对08年世界金融危机的解读，以及行天丰雄根据日元发展历史，为中国和人民币的走向所提出的诚恳建议，尤其具有参考与旧版相比，新版增加了沃尔克对08年世界金融危机的解读，以及行天丰雄根据日元发展历史，为中国和人民币的走向所提出的诚恳建议，尤其具有参考" data-short="与旧版相比，新版增加了沃尔克对08年世界金融危机的解读，以及行天丰雄根据日元发展历史，为中国和人民币的走向所提出的诚恳建议，尤其具有参考...">
+                <span class="innerText">与旧版相比，新版增加了沃尔克对08年世界金融危机的解读，以及行天丰雄根据日元发展历史，为中国和人民币的走向所提出的诚恳建议，尤其具有参考...</span><a href="javascript:;" class="text-more">展开</a>
+            </div>
+        </section>
+        <!--底部按钮-->
+        <section class="book-btnline">
+            <div class="book-car">
+                <p class="book-car-wrap">
+                    <img src="src/images/source/title_icon_shoppingcart.png" class="book-car-img" alt="购物车" />
+                    <span class="book-car-num">1</span>
+                </p>
+                <p class="book-btn-middle">
+                    <a href="javascript:;" class="add-shelf">加入书架</a>
+                </p>
+                <a href="javascript:;" class="add-car j_addcar">加购物车</a>
+            </div>
+        </section>
+        <!--购物车列表-->
+        
+        <section class="car-list">
+            <div class="car-list-mask"></div>
+            <ul class="car-list-wrap">
+                <!--<li class="car-item">
+                    <div class="item-left">
+                        <img src="src/images/cover/cover01.png" alt="">
+                    </div>
+                    <div class="item-middle">
+                        <p class="item-name">时运变迁</p>
+                        <p class="item-price">
+                            <span>￥</span>465
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="javascript:;" class="item-del">删除</a>
+                    </div>
+                    <div class="item-close">
+                        
+                    </div>
+                </li>-->
+               
+            </ul>
+        </section>
+        <!--底部占位-->
+        <section class="page-bottom">   
+        </section>
+    </div>    
+
+  <!--<script src="./src/js/index.js"></script>  注释 -->
+   <script src="./dist/js/pack.js"></script><!-- -->
+</body>
+</html>
+
