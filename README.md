@@ -12,119 +12,60 @@
 
 ### Code
 
-- **Native JavaScript**
+- **toast弹框提示**
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="simbawu">
-  <title>Digital Keyboard</title>
-</head>
-<body>
-  <div id="values"></div>
-  <div id="app"></div>
-  <script src="./digitalKeyboard.js"></script>
-</body>
-</html>
-```
-
-```javascript
-//digitalKeyboard.js
-import DigitalKeyboard from 'digital-keyboard';
-
-function inputValue(value){
-  console.log(value); //DigitalKeyboard return value
-  document.querySelector('#values').innerHTML = value;
-}
-
-new DigitalKeyboard(
-    {
-        el: document.querySelector('#app'), 
-        type: 'idcard', 
-        inputValue: inputValue
+toastFun:function(show,msg,last){
+        var self=this;
+        clearInterval(self.timmer);  
+        this.setState({
+            toast:{
+                show: show,
+                msg: msg,
+                last: last
+            }
+        })
+        self.timmer=setTimeout(function(){
+            self.setState({
+                toast:{
+                    show:false,
+                    msg: msg,
+                    last: last
+                }
+            });
+        }.bind(this),self.state.toast.last);
     }
-);
-```
 
-- **React**
 
-```jsx
-import React from 'react';
-import DigitalKeyboard from "digital-keyboard";
-class KeyboardPage extends React.Component {
+- **加入购物车并写入缓存**
 
-  constructor(){
-    super();
-
-    this.inputValue = this.inputValue.bind(this);
-    this._renderKeyboard = this._renderKeyboard.bind(this);
-  }
-
-  componentDidMount(){
-    this._renderKeyboard();
-  }
-    
-  inputValue(value){
-    console.log(value); //DigitalKeyboard return value
-  }
-
-  _renderKeyboard(){
-    return new DigitalKeyboard (
-      {
-        el: this.refs.digitalKeyboard,
-        type: 'number',
-        inputValue: this.inputValue
-      }
-    );
-  }
-
-  render(){
-    return (
-      <div ref='digitalKeyboard'></div>
-    )
-  }
-}
-
-export default KeyboardPage;
-```
-
-- **Vue**
-
-```js
-<template>
-  <div></div>
-</template>
-<script>
-import DigitalKeyboard from "digital-keyboard";
-export default {
-  mounted () {
-    this._renderDigitalKeyboard();
-  },
-  methods: () {
-    _renderDigitalKeyboard() {
-    	return new DigitalKeyboard (
-          {
-            el: this.$el,
-            type: 'number',
-            inputValue: this.inputValue
-          }
-        );
-    },
-     
-    inputValue(value) {
-      console.log(value); //DigitalKeyboard return value
+addCar:function(){
+        var self = this;
+        if(localStorage.getItem('cps_item')!=null||localStorage.getItem('cps_item')!=undefined){           
+            self.toastFun(true,'已存在购物车',5000);
+        }else{
+            self.setState({
+                carInfo:{
+                    carNum: pageData.bookInfo.carNum,
+                    bookName: pageData.bookInfo.bookName,
+                    bookPrice: pageData.bookInfo.bookPrice,
+                    coverImg: pageData.bookInfo.coverImg,
+                },   
+            })
+            localStorage.setItem('cps_item',JSON.stringify(pageData.bookInfo));
+            self.toastFun(true,'加入购物车成功',5000); 
+        }  
     }
-  }
-}
-</script>
-```
-## How to Contribute
 
-Anyone and everyone is welcome to contribute to this project. The best way to start is by checking our [open issues](https://github.com/simbawus/DigitalKeyboard/issues),[submit a new issues](https://github.com/simbawus/DigitalKeyboard/issues/new?labels=bug) or [feature request](https://github.com/simbawus/DigitalKeyboard/issues/new?labels=enhancement), participate in discussions, upvote or downvote the issues you like or dislike.
+- **删除购物车**
 
-## License
-
-[**The MIT License**](http://opensource.org/licenses/MIT).
-
+delCar:function(){
+        this.setState({
+            carInfo:{
+                carNum: 0,
+                bookName: '',
+                bookPrice: '',
+                coverImg: '',
+            },   
+        })
+        localStorage.clear('cps_item');        
+    }
