@@ -1,58 +1,16 @@
-# Digital Keyboard
+# React实例 加入购物车
 
-[![Build Status](https://travis-ci.org/simbawus/DigitalKeyboard.svg?branch=master)](https://travis-ci.org/simbawus/DigitalKeyboard)
-[![Coverage Status](https://coveralls.io/repos/github/simbawus/DigitalKeyboard/badge.svg?branch=master)](https://coveralls.io/github/simbawus/DigitalKeyboard?branch=master)
-[![npm](https://img.shields.io/npm/v/digital-keyboard.svg)](https://www.npmjs.com/package/digital-keyboard)
-[![npm](https://img.shields.io/npm/dt/digital-keyboard.svg)](https://www.npmjs.com/package/digital-keyboard)
-[![GitHub license](https://img.shields.io/github/license/simbawus/DigitalKeyboard.svg)](https://github.com/simbawus/DigitalKeyboard/blob/master/LICENSE)
-
-###### [中文README](README-zh_CN.md)
-
-- Develop with native javascript, doesn't rely on any frameworks and libraries.
-- Support ID card, mobile number, integer, decimal, etc.
-- Easy API, easy use.
-- Development summary：[How to release a Digital Keyboard npm package](https://github.com/simbawus/blog/issues/12).
-
-[![Example](https://i.loli.net/2018/05/16/5afc5086957b3.gif)](https://i.loli.net/2018/05/16/5afc5086957b3.gif)
-
-## Type
-
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="middle">
-        <img width="240px" src="https://i.loli.net/2018/05/16/5afc5360a4c21.jpg">
-        <p>decimal</p>
-      </td>
-      <td align="center" valign="middle">
-        <img width="240px" src="https://i.loli.net/2018/05/17/5afc59314b61c.jpg">
-        <p>integer/phone</p>
-      </td>
-      <td align="center" valign="middle">
-        <img width="240px" src="https://i.loli.net/2018/05/16/5afc5360c635f.jpg">
-        <p>idcard</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## PropTypes
-
-| Property        | Type     | Default      | Description           |
-| :-------------- | :------- | :----------- | :-------------------- |
-| el | DOM |  | parent node  | 
-| type  | String   | decimal | decimal，integer，phone，idcard |
-| inputValue    | Function   |  |  return keyboard value      |
+![image](https://github.com/qianqian978/shopcar/blob/master/src/images/carpic.png)
 
 ## Getting Started
 
-### Install
+### run运行
 
-```shell
-yarn add digital-keyboard --dev
-```
+下载后进入目录npm install；
+命令下 gulp server运行
+浏览器输入:http://localhost:5000/
 
-### Usage Example
+### Code
 
 - **Native JavaScript**
 
