@@ -14,6 +14,7 @@
 
 - **toast弹框提示**
 
+```jsx
 toastFun:function(show,msg,last){
         var self=this;
         clearInterval(self.timmer);  
@@ -34,10 +35,11 @@ toastFun:function(show,msg,last){
             });
         }.bind(this),self.state.toast.last);
     }
-
+```
 
 - **加入购物车并写入缓存**
 
+```jsx
 addCar:function(){
         var self = this;
         if(localStorage.getItem('cps_item')!=null||localStorage.getItem('cps_item')!=undefined){           
@@ -55,9 +57,10 @@ addCar:function(){
             self.toastFun(true,'加入购物车成功',5000); 
         }  
     }
-
+```
 - **删除购物车**
 
+```jsx
 delCar:function(){
         this.setState({
             carInfo:{
@@ -69,3 +72,4 @@ delCar:function(){
         })
         localStorage.clear('cps_item');        
     }
+```
